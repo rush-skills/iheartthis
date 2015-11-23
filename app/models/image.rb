@@ -29,4 +29,8 @@ class Image < ActiveRecord::Base
   enumerize :mode, in: [:online, :offline]
 
 	attr_accessor :image_cache, :temp
+
+	def total_heart
+		self.hearts.count
+	end
 end

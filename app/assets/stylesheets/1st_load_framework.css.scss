@@ -33,6 +33,9 @@ img {
   }
 // apply styles to HTML elements
 // to make views framework-neutral
+html{
+  background-color: #fafafa;
+}
 main {
   @extend .container;
   background-color: #fafafa;

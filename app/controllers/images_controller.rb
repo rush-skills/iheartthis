@@ -1,6 +1,15 @@
 class ImagesController < ApplicationController
   # before_action :authenticate_user!
-  before_action :set_image, only: [:show, :edit, :update, :destroy]
+  before_action :set_image, only: [:show, :edit, :update, :destroy, :add_heart]
+
+  def add_heart
+    h = Heart.create(user: current_user, image: @image)
+    if h
+      render json: {status: 200}
+    else
+      render json: {status: 500}
+    end
+  end
 
   # GET /images
   # GET /images.json
