@@ -1,0 +1,12 @@
+
+.my-images-wrapper.row
+
+  - @images.each do |image|
+    .col-md-4.col-sm-6.card
+      == render 'card', image: image
+
+  .col-md-4.col-sm-6.card
+    = link_to new_image_path do
+      .row.top40m.nolrm
+        .col-md-10.col-md-offset-1.well-sm.well.row.center.add_button.nolrm
+          span.fa.fa-plus.fa-4x

@@ -1,0 +1,33 @@
+.row.top40m.nolrm
+  .col-md-10.col-md-offset-1.well-sm.well.row.nolrm
+    .heading.row.nolrm
+      .col-xs-9
+        .top0m.icard
+          = image.title
+      .col-xs-3
+        - if image.has_hearted? current_user or not user_signed_in?
+          .icard.heart1.pull-right
+            = image.total_hearts
+            span.fa.fa-heart-o
+        - else
+          = link_to add_heart_path(image), method: :post, remote: true, class: "icard heart0 pull-right" do
+            span.heart-count
+              = image.total_hearts
+            span.fa.fa-heart-o
+    hr
+    .image
+      img#card_preview src=image.image.url
+    hr
+    .details.row.nolrm
+      .col-xs-6
+        .image-by.icard
+          span.fa.fa-user
+          = image.user.to_s
+      .col-xs-6
+        .found-at.pull-right.icard
+          span.fa.fa-map-marker
+          - if image.mode.online?
+            = link_to "Link", image.location, class: "website-link"
+          - else
+            = image.location
+

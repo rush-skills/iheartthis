@@ -37,20 +37,53 @@ abbr{
 .top10m{
 	margin-top: 10px;
 }
-.heart0{
+.heart0,.heart0:hover,.heart0:active,.heart0:visited,.heart0:focus{
 	color: #222;
 	text-decoration: none;
 	font-size: 1.5em;
 }
-.heart0:hover{
-		text-decoration: none;
-		color: #222;
-}
-.heart1{
+.heart1:hover,.heart1:active,.heart1:visited,.heart1:focus,.heart1{
 	color: #F44336;
 	text-decoration: none;
 	font-size: 1.5em;
 }
+
 .image-by, .found-at{
 	font-size: 1.2em;
+}
+.redheart{
+	color: #F44336;
+}
+#card_preview{
+	max-height: 250px;
+}
+.icard{
+	font-size: 1.2em !important;
+}
+.card{
+	// height: 300px;
+}
+.add_button{
+	height: 250px;
+	line-height: 250px;
+}
+h1,h2,h3,h4,h5,h6,div,span,p,html,body,head{
+	font-family: 'Roboto', sans-serif;
+}
+.website-link:hover,.website-link:active,.website-link:visited,.website-link:focus,.website-link{
+	color: #222;
+	text-decoration: none;
+}
+.icon-bar{
+	background-color: #f44336;
+}
+.navbar-toggle{
+	border-color: #f44336;
+}
+.nolrm{
+	margin-left: 0;
+	margin-right: 0;
+}
+.loginfb{
+	font-size: 24px;
 }
