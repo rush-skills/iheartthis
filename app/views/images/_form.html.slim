@@ -25,8 +25,8 @@ script type="text/javascript" src="http://feather.aviary.com/imaging/v2/editor.j
               = f.input :temp, label: false, placeholder: "URL of the image"
           / = f.input :image_cache, as: :hidden, :input_html => {:value => @image.image_cache}
           = f.input :tags, label: false, placeholder: "Tags!"
-          = f.input :location, label: false, placeholder: "Location of the image"
-          = f.input :mode, as: :radio_buttons
+          = f.input :location, label: false, placeholder: "Found at..."
+          = f.input :mode, as: :hidden
 
         .form-actions.center
           = f.button :submit, "Submit", class: "btn btn-success"

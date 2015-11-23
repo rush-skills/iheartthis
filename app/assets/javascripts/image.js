@@ -17,6 +17,7 @@ $(document).on('ready',function(){
       }
       reader.readAsDataURL(file);
     }
+     $("input[id='image_mode']").val("offline");
 	});
 
 	$("input[id='image_temp']").on('change',function(e){
@@ -24,6 +25,7 @@ $(document).on('ready',function(){
      var val = $("input[id='image_temp']").val();
      img.attr('src',val);
      $("input[id='image_remote_image_url']").val(val);
+     $("input[id='image_mode']").val("online");
 	});
 	var featherEditor = new Aviary.Feather({
 		apiKey: 'b2da2d33ca1f4e9e8a1d825932760d12',

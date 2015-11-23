@@ -17,6 +17,9 @@ class ImagesController < ApplicationController
   def new
     @image = Image.new
     @image.mode = :offline
+    @image.remote_image_url = params[:imageurl] if params[:imageurl].present?
+    @image.location = params[:pageurl] if params[:pageurl].present?
+    @image.mode = :online if params[:pageurl].present? or params[:imageurl].present?
   end
 
   # GET /images/1/edit
