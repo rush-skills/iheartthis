@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
       user.uid = auth['uid']
       if auth['info']
          user.name = auth['info']['name'] || ""
-         user.image = auth['info']['image'] || ""
+         user.avatar = auth['info']['image'] || ""
          user.email = auth['info']['email'] || ""
       end
     end

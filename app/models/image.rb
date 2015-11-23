@@ -28,4 +28,5 @@ class Image < ActiveRecord::Base
   extend Enumerize
   enumerize :mode, in: [:online, :offline]
 
+	attr_accessor :image_cache, :temp
 end

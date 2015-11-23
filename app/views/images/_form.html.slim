@@ -1,13 +1,35 @@
-= simple_form_for(@image) do |f|
-  = f.error_notification
+script type="text/javascript" src="http://feather.aviary.com/imaging/v2/editor.js"
+== javascript_include_tag 'image'
 
-  .form-inputs
-    = f.input :title
-    = f.input :image
-    = f.input :tags
-    = f.input :location
-    = f.input :mode
-    = f.association :user
+.row
+  .col-md-8
+    .image_wrapper.well.well-sm
+      .adobe.center
+        input#edit type='image' src='http://images.aviary.com/images/edit-photo.png' value='Edit photo'
 
-  .form-actions
-    = f.button :submit
+      img#preview src=full_url(@image.image)
+  .col-md-4
+    .well.well-sm
+      = simple_form_for(@image) do |f|
+        = f.error_notification
+
+        .form-inputs
+          = f.input :title, required: false, label: false, placeholder: "Title"
+          = f.input :remote_image_url, as: :hidden
+          .hide
+            = f.input :image
+          .row
+            .col-xs-3
+              #upload.btn.btn-primary.btn-sm Upload Image
+            .col-xs-9
+              = f.input :temp, label: false, placeholder: "URL of the image"
+          / = f.input :image_cache, as: :hidden, :input_html => {:value => @image.image_cache}
+          = f.input :tags, label: false, placeholder: "Tags!"
+          = f.input :location, label: false, placeholder: "Location of the image"
+          = f.input :mode, as: :radio_buttons
+
+        .form-actions.center
+          = f.button :submit, "Submit", class: "btn btn-success"
+          |  
+          = link_to 'Back', images_path, class: "btn btn-primary"
+
