@@ -17,10 +17,10 @@ script type="text/javascript" src="http://feather.aviary.com/imaging/v2/editor.j
           = f.input :title, required: false, label: false, placeholder: "Title"
           = f.input :remote_image_url, as: :hidden
           .hide
-            = f.input :image
+            = f.input :image, required: false
           .row
             .col-xs-3
-              #upload.btn.btn-primary.btn-sm Upload Image
+              #upload.btn.btn-primary.btn Upload
             .col-xs-9
               = f.input :temp, label: false, placeholder: "URL of the image"
           / = f.input :image_cache, as: :hidden, :input_html => {:value => @image.image_cache}
