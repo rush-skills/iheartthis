@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require slick-carousel
 //= require select2
 //= require google_analytics
 //= require script

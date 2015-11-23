@@ -19,7 +19,7 @@
 
 class Image < ActiveRecord::Base
   belongs_to :user
-  has_many :hearts
+  has_many :hearts, dependent: :destroy
 
   mount_uploader :image, ImageUploader
 
