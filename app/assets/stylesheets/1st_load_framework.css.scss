@@ -34,7 +34,7 @@ html{
   background-color: #fcfcfc;
 }
 main {
-  @extend .container;
+  @extend .container-fluid;
   background-color: #fcfcfc;
   // padding-bottom: 80px;
   width: 100%;

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/explore" => 'images#index', as: :images
   post "/explore" => 'images#create'
   get "/new" => 'images#new', as: :new_image
+  get "/fast_new" => 'images#fast_new'
   post "/new" => 'images#create', as: :create_image
   get "/show/:id" => "images#show", as: :image
   get "/edit/:id" => "images#edit", as: :edit_image

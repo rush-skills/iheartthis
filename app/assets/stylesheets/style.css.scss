@@ -18,8 +18,35 @@ abbr{
   font-size: 1.5em;
   color: #111;
 }
-#preview{
-	max-height: 700px;
+@media screen and (min-height: 300px){
+	#preview{
+		max-height: 200px;
+	}
+}
+@media screen and (min-height: 500px){
+	#preview{
+		max-height: 300px;
+	}
+}
+@media screen and (min-height: 700px){
+	#preview{
+		max-height: 400px;
+	}
+}
+@media screen and (min-height: 900px){
+	#preview{
+		max-height: 550px;
+	}
+}
+@media screen and (min-height: 1000px){
+	#preview{
+		max-height: 700px;
+	}
+}
+@media screen and (min-height: 1500px){
+	#preview{
+		max-height: 1300px;
+	}
 }
 .navbar{
 	border-bottom: 1px solid #222;
@@ -86,4 +113,25 @@ h1,h2,h3,h4,h5,h6,div,span,p,html,body,head{
 }
 .loginfb{
 	font-size: 24px;
+}
+.dashcard, .dashcard a{
+	margin-top: 40px;
+	font-size: 1.5em;
+	height: 400px;
+	padding-top: 40px;
+	.dashicon{
+		line-height: 250px;
+	}
+	text-align: center;
+	margin: 20px;
+	// background: #eee;
+	color: #777;
+	text-decoration: none;
+}
+.dashcard:hover{
+	text-decoration: none;
+}
+.container-fluid{
+	margin-left: 5%;
+	margin-right: 5%;
 }

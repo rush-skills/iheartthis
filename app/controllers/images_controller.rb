@@ -56,6 +56,19 @@ class ImagesController < ApplicationController
     end
   end
 
+  def fast_new
+    @image = Image.new
+    @image.mode = :online
+    @image.remote_image_url = params[:imageurl] if params[:imageurl].present?
+    @image.location = params[:pageurl] if params[:pageurl].present?
+    @image.user = current_user
+    if @image.save
+      render json: {status: 200}
+    else
+      render json: {status: 500}
+    end
+  end
+
   # PATCH/PUT /images/1
   # PATCH/PUT /images/1.json
   def update

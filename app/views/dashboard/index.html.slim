@@ -1,2 +1,25 @@
-= link_to "Explore", explore_path
-= link_to "Add", "/new"
+.row
+	.col-sm-4
+		.dashcard
+			= link_to images_path do
+				.dashicon
+					span.fa.fa-search.fa-4x
+				.dashtext
+					| Explore
+
+	.col-sm-4
+		.dashcard
+			= link_to my_images_path do
+				.dashicon
+					span.fa.fa-list.fa-4x
+				.dashtext
+					| Mine
+
+
+	.col-sm-4
+		.dashcard
+			= link_to new_image_path do
+				.dashicon
+					span.fa.fa-plus.fa-4x
+				.dashtext
+					| Add

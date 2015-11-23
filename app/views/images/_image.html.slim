@@ -1,6 +1,6 @@
-.row.top40m
-  .col-md-8.col-md-offset-2.well.row
-    .heading.row
+.top40m.nolrm.row
+  .col-md-8.col-md-offset-2.well
+    .heading.row.nolrm
       .col-xs-8.col-xs-offset-1
         h2.top0m
           = image.title
@@ -11,14 +11,15 @@
             span.fa.fa-heart-o
         - else
           = link_to add_heart_path(image), method: :post, remote: true, class: "heart0 pull-right" do
-            = image.total_hearts
+            span.heart-count
+              = image.total_hearts
             span.fa.fa-heart-o
       .col-xs-1
     hr
     .image
       img#preview src=image.image.url
     hr
-    .details.row
+    .details.row.nolrm
       .col-xs-5.col-xs-offset-1
         .image-by
           | By: 
