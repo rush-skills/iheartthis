@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @image.title
+p
+  strong Image:
+  = @image.image
+p
+  strong Tags:
+  = @image.tags
+p
+  strong Location:
+  = @image.location
+p
+  strong Mode:
+  = @image.mode
+p
+  strong User:
+  = @image.user
+
+= link_to 'Edit', edit_image_path(@image)
+'|
+= link_to 'Back', images_path

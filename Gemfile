@@ -20,6 +20,14 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'enumerize'
+gem 'kaminari'
+gem 'faker'
+gem "select2-rails"
+gem "font-awesome-rails"
+gem 'carrierwave'
+gem 'rails_admin'
+gem 'annotate'
 gem 'therubyracer', :platform=>:ruby
 group :development do
   gem 'better_errors'
