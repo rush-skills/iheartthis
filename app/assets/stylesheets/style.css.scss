@@ -11,3 +11,46 @@ abbr{
 .hide{
 	display: none;
 }
+.nav a{
+	color: #111;
+}
+.navbar-brand {
+  font-size: 1.5em;
+  color: #111;
+}
+#preview{
+	max-height: 700px;
+}
+.navbar{
+	border-bottom: 1px solid #222;
+	background: #fafafa;
+}
+.image-form, .top40m{
+	margin-top: 40px;
+}
+.form-or{
+	font-size: 1.4em;
+}
+.top0m{
+	margin-top: 0px;
+}
+.top10m{
+	margin-top: 10px;
+}
+.heart0{
+	color: #222;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+.heart0:hover{
+		text-decoration: none;
+		color: #222;
+}
+.heart1{
+	color: #F44336;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+.image-by, .found-at{
+	font-size: 1.2em;
+}

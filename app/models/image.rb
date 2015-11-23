@@ -30,7 +30,11 @@ class Image < ActiveRecord::Base
 
 	attr_accessor :image_cache, :temp
 
-	def total_heart
+	def total_hearts
 		self.hearts.count
 	end
+
+  def has_hearted?(user)
+    Heart.where(user: user,image: self).present?
+  end
 end

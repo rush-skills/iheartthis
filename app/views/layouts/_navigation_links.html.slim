@@ -1,2 +1,14 @@
+- if user_signed_in?
+	li
+		= link_to images_path do
+			| Explore 
+			span.fa.fa-heart-o
+			| s
+
+	li
+		= link_to my_images_path do
+			| My 
+			span.fa.fa-heart-o
+			| s
 == render 'layouts/nav_links_for_auth'
 

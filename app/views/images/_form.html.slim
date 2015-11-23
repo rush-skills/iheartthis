@@ -1,7 +1,7 @@
 script type="text/javascript" src="http://feather.aviary.com/imaging/v2/editor.js"
 == javascript_include_tag 'image'
 
-.row
+.row.image-form
   .col-md-8
     .image_wrapper.well.well-sm
       .adobe.center
@@ -10,6 +10,13 @@ script type="text/javascript" src="http://feather.aviary.com/imaging/v2/editor.j
       img#preview src=full_url(@image.image)
   .col-md-4
     .well.well-sm
+      h1.center
+        - if @image.new_record?
+          | New  
+        - else
+          | Edit  
+        span.fa.fa-heart-o
+
       = simple_form_for(@image) do |f|
         = f.error_notification
 
@@ -19,8 +26,9 @@ script type="text/javascript" src="http://feather.aviary.com/imaging/v2/editor.j
           .hide
             = f.input :image, required: false
           .row
-            .col-xs-3
-              #upload.btn.btn-primary.btn Upload
+            .col-xs-2
+              #upload.btn.btn-primary.btn-sm Upload
+            .col-xs-1.form-or OR
             .col-xs-9
               = f.input :temp, label: false, placeholder: "URL of the image"
           / = f.input :image_cache, as: :hidden, :input_html => {:value => @image.image_cache}

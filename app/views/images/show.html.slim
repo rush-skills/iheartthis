@@ -1,24 +1,33 @@
-p#notice = notice
+.row.top40m
+  .col-md-8.col-md-offset-2.well.row
+    .heading.row
+      .col-xs-8.col-xs-offset-1
+        h2.top0m
+          = @image.title
+      .col-xs-2
+        - if @image.has_hearted? current_user
+          .heart1.pull-right
+            = @image.total_hearts
+            span.fa.fa-heart-o
+        - else
+          = link_to add_heart_path, method: :post, class: "heart0 pull-right" do
+            = @image.total_hearts
+            span.fa.fa-heart-o
+      .col-xs-1
+    hr
+    .image
+      img#preview src=@image.image.url
+    hr
+    .details.row
+      .col-xs-5.col-xs-offset-1
+        .image-by
+          | By: 
+          = @image.user.to_s
+      .col-xs-5
+        .found-at.pull-right
+          | Found at:
+          - if @image.mode.online?
+            = link_to "here", @image.location
+          - else
+            = @image.location
 
-p
-  strong Title:
-  = @image.title
-p
-  strong Image:
-  = @image.image
-p
-  strong Tags:
-  = @image.tags
-p
-  strong Location:
-  = @image.location
-p
-  strong Mode:
-  = @image.mode
-p
-  strong User:
-  = @image.user
-
-= link_to 'Edit', edit_image_path(@image)
-'|
-= link_to 'Back', images_path
